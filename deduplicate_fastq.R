@@ -9,8 +9,8 @@ library("microseq")
 # https://rdrr.io/cran/microseq/man/readFastq.html
 args = commandArgs(trailingOnly=TRUE)
 
-f<-read.table(args[1])
-# f<-readFastq("A9161.fastq.out.fq")
+# f<-read.table(args[1])
+f<-readFastq(args[1])
 
 df<-f%>%
   distinct(Header,.keep_all = T)
